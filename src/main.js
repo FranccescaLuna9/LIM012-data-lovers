@@ -2,7 +2,7 @@
 // import data from './data/lol/lol.js';
 // import data from './data/pokemon/pokemon.js';
 
-// import dataAtletas from './data/atletas/atletas.js';
+//import dataAtletas from './data/atletas/atletas.js';
 import dataAtletas from './data/copy.js';
 
 const transformaBandera = (initial) => {
@@ -10,12 +10,8 @@ const transformaBandera = (initial) => {
   return newInitial;
 };
 
-<<<<<<< HEAD
 const data = (dataAtletas.atletas);
 console.log("todos los atletas =>",data);
-=======
-const data = dataAtletas.atletas;
->>>>>>> d44994bb4bedc1a66c87392373f56d68ea1d4423
 
 document.getElementById('main').innerHTML = `
 <h2 class='titleh2' >TODOS LOS ATLETAS</h2>
@@ -56,11 +52,19 @@ const filtrardataMujeres = data.filter( items =>{ return (items.gender === 'F')
 });
 console.log("atletas mujeres =>", filtrardataMujeres);
 
-/* para las opciones de temporada y medallas debemos filtar el array disciplinas de array general Atletas */
-const filtrardataInvierno = data.filter( items =>{ return (items.disciplinas.filter( item =>{ return (item.temporada === 'Summer')}))
+/* para las opciones de temporada y medallas debemos filtar el array disciplinas de array general Atletas 
+const filtrardataInvierno = data.filter( items =>{
+return (items.disciplinas.filter( item =>{ return (item.temporada === 'Summer')}))
 });
 console.log("temporada inviernop =>", filtrardataInvierno);
 
 const filtrarmedallaOro = data.filter( items =>{ return (items.gender === 'F')
 });
-console.log("atletas mujeres =>", filtrarmedallaOro);
+console.log("atletas mujeres =>", filtrarmedallaOro); */
+data.forEach(item =>{
+if (
+ item.hasOwnProperty('disciplinas')
+){
+  console.log("temporada summer =>",item.disciplinas.filter(el => { return (el.temporada === 'Summer')})) 
+}
+});

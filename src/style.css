@@ -32,25 +32,6 @@ body {
   /*tambien puede ser width:0*/
   width: 100%;
 }
-<<<<<<< HEAD
-.navegador{
-  outline: 1px solid yellow;
-  font-family: sans-serif;
-  margin-left: 5%;
-  flex: auto;
-  display:flex;
-  justify-content: space-between;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-  box-sizing: border-box;
-  
-  
-}
-.navegador a {
-  color: #ffffff;
-  text-align: center;
-=======
 
 .logo {
   margin-top: 3px;
@@ -72,7 +53,6 @@ body {
 a {
   padding: 0.5rem 1rem;
   color: var(--color-size);
->>>>>>> d44994bb4bedc1a66c87392373f56d68ea1d4423
   text-decoration: none;
   /*le estamos quitando el subrayado azul que tine por defaul*/
   font-size: 23px;
@@ -105,16 +85,6 @@ i {
   background: #e74d3c88;
 }
 
-<<<<<<< HEAD
-.{
-  
-  list-style: none;
-  text-decoration: none;
-  justify-content: space-around;
-}
-
-
-=======
 /*main*/
 .background {
   background-image: url(./img/background.jpg);
@@ -153,7 +123,6 @@ i {
   display: block;
   margin-top: 0.4em;
 }
->>>>>>> d44994bb4bedc1a66c87392373f56d68ea1d4423
 
 .container {
   height: 100vh;
@@ -196,26 +165,4 @@ i {
 .infoPrincipal {
   width: 45%;
 }
-<<<<<<< HEAD
-
-@media screen and (max-width: 800px) {
-
-  @media screen and (max-width: 800px) {
-    .container {
-      flex-direction: column;
-    }
-
-    footer .social a {
-      flex: 0;
-    }
-  }
-    @media screen and (max-width: 600px) {
-      @media screen and (max-width: 400px) {
-        aside {
-          flex-direction: column;
-		}
-	}
-}}
-=======
 */
->>>>>>> d44994bb4bedc1a66c87392373f56d68ea1d4423
