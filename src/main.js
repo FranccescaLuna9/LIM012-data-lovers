@@ -2,7 +2,7 @@
 // import data from './data/lol/lol.js';
 // import data from './data/pokemon/pokemon.js';
 
-//import dataAtletas from './data/atletas/atletas.js';
+// import dataAtletas from './data/atletas/atletas.js';
 import dataAtletas from './data/copy.js';
 
 const transformaBandera = (initial) => {
@@ -10,8 +10,8 @@ const transformaBandera = (initial) => {
   return newInitial;
 };
 
-const data = (dataAtletas.atletas);
-console.log("todos los atletas =>",data);
+const data = dataAtletas.atletas;
+
 
 document.getElementById('main').innerHTML = `
 <h2 class='titleh2' >TODOS LOS ATLETAS</h2>
@@ -34,7 +34,7 @@ ${data
     </div>
     <img width = 40 height = 40 src = "https://www.countryflags.io/${transformaBandera(dataPrincipal.noc)}/flat/64.png"
     class >
-    
+
 </div>
 `,
     )
@@ -42,29 +42,87 @@ ${data
 </div>
 `;
 
+
 /* filtrar a los atletas por  */
 
-const filtrardataHombres = data.filter(items =>{ return (items.gender === 'M')
-});
-console.log("atletas hombres =>", filtrardataHombres);
+/* const filtrardataHombres = data.filter(items => (items.gender === 'M'));
+console.log('atletas hombres =>', filtrardataHombres);
 
-const filtrardataMujeres = data.filter( items =>{ return (items.gender === 'F')
-});
-console.log("atletas mujeres =>", filtrardataMujeres);
+const filtrardataMujeres = data.filter(items => (items.gender === 'F'));
+console.log('atletas mujeres =>', filtrardataMujeres); */
 
-/* para las opciones de temporada y medallas debemos filtar el array disciplinas de array general Atletas 
-const filtrardataInvierno = data.filter( items =>{
-return (items.disciplinas.filter( item =>{ return (item.temporada === 'Summer')}))
-});
-console.log("temporada inviernop =>", filtrardataInvierno);
+/* para las opciones de temporada y medallas debemos filtar el array disciplinas de array general Atletas */
+/* const filtrardataInvierno = data.filter(items => (items.disciplinas.filter(item => (item.temporada === 'winter'))));
+console.log('temporada inviernop =>', filtrardataInvierno);
 
-const filtrarmedallaOro = data.filter( items =>{ return (items.gender === 'F')
+const filtrarmedallaOro = data.filter(items => (items.gender === 'F'));
+console.log('atletas mujeres =>', filtrarmedallaOro); */
+
+/* const filterGender = data.filter(ele => (ele.gender === 'F'));
+console.log(filterGender); */
+
+/* FILTRADOS del array Disciplina */
+/* filtrado  por temporada Verano */
+const tempSummer = [];
+data.forEach((elem) => {
+  if (elem.hasOwnProperty('disciplinas')) {
+    elem.disciplinas.forEach((obj) => {
+      if (obj.temporada === 'Summer') {
+        tempSummer.push(elem);
+      }
+    });
+  }
 });
-console.log("atletas mujeres =>", filtrarmedallaOro); */
-data.forEach(item =>{
-if (
- item.hasOwnProperty('disciplinas')
-){
-  console.log("temporada summer =>",item.disciplinas.filter(el => { return (el.temporada === 'Summer')})) 
-}
+console.log(tempSummer);
+
+/* filtrado por temporada Invierto */
+const tempWinter = [];
+data.forEach((elem) => {
+  if (elem.hasOwnProperty('disciplinas')) {
+    elem.disciplinas.forEach((obj) => {
+      if (obj.temporada === 'Winter') {
+        tempWinter.push(elem);
+      }
+    });
+  }
 });
+console.log(tempWinter);
+
+/* filtrado por tipo de medalla oro */
+const medallaGold = [];
+data.forEach((elem) => {
+  if (elem.hasOwnProperty('disciplinas')) {
+    elem.disciplinas.forEach((obj) => {
+      if (obj.medalla === 'Gold') {
+        medallaGold.push(elem);
+      }
+    });
+  }
+});
+console.log(medallaGold);
+
+/* filtrado por tipo de medalla plata */
+const medallaSilver = [];
+data.forEach((elem) => {
+  if (elem.hasOwnProperty('disciplinas')) {
+    elem.disciplinas.forEach((obj) => {
+      if (obj.medalla === 'Silver') {
+        medallaSilver.push(elem);
+      }
+    });
+  }
+});
+console.log(medallaSilver);
+
+/* filtrado por tipo de medalla bronce */
+const medallaBronze = [];
+data.forEach((elem) => {
+  if (elem.hasOwnProperty('disciplinas')) {
+    elem.disciplinas.forEach((obj) => {
+      if (obj.medalla === 'Bronze') {
+        medallaBronze.push(elem);
+      }
+    });
+  }
+});
+console.log(medallaBronze);
