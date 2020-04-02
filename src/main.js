@@ -2,25 +2,47 @@
 // import data from './data/lol/lol.js';
 // import data from './data/pokemon/pokemon.js';
 
-import dataAtletas from './data/atletas/atletas.js';
+// import dataAtletas from './data/atletas/atletas.js';
+import dataAtletas from './data/copy.js';
 
-console.log(dataAtletas);
+const transformaBandera = (initial) => {
+  const newInitial = initial.slice(0, -1);
+  return newInitial;
+};
 
+<<<<<<< HEAD
 const data = (dataAtletas.atletas);
 console.log("todos los atletas =>",data);
+=======
+const data = dataAtletas.atletas;
+>>>>>>> d44994bb4bedc1a66c87392373f56d68ea1d4423
 
 document.getElementById('main').innerHTML = `
-<h2 class='title' >TODOS LOS ATLETAS</h2>
+<h2 class='titleh2' >TODOS LOS ATLETAS</h2>
 
 <div class="container">
-${data.map(dataPrincipal => `
+${data
+    .map(
+      dataPrincipal => `
 <div class="cards">
-<h2>${dataPrincipal.name}</h2>
-<p><strong>Sport :</strong> ${dataPrincipal.sport} </p>
-<p><strong>Weigth :</strong> ${dataPrincipal.weigth} </p>
-<p><strong>Team:</strong> ${dataPrincipal.team} </p>
+<img width=110 height=110 src = ${
+  dataPrincipal.gender === 'F'
+    ? './img/avatarMujer.png'
+    : './img/avatarVaron.png'
+} class="imgAvatar">
+    <div class="infoPrincipal ">
+      <h2>${dataPrincipal.name}</h2>
+      <p><strong class ="description">Sport :</strong> ${dataPrincipal.sport} </p>
+      <p><strong class = "description">Weigth :</strong> ${dataPrincipal.weight} </p>
+      <p><strong class = "description">Team:</strong> ${dataPrincipal.team} </p>
+    </div>
+    <img width = 40 height = 40 src = "https://www.countryflags.io/${transformaBandera(dataPrincipal.noc)}/flat/64.png"
+    class >
+    
 </div>
-`).join('')}
+`,
+    )
+    .join('')}
 </div>
 `;
 
