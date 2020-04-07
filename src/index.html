@@ -15,22 +15,23 @@
       <div class="logo">
         <img src="img/logoOlimpiadas.png" width="160" alt="logo" />
       </div>
+      <!--AGREGAMOS UN ID A LAS PESTAÑAS PARA DARLE FUNCIONALIDAD EN EL MAIN.JS-->
       <nav class="navegador">
         <ul class="menu">
-          <li>
+          <li id="home"> <!--id de la pagina principal-->
             <a href="#" class="navInicio">
               <i class="fas fa-home"></i>
-              <span>Inicio</span>
+              <span >HOME</span> 
             </a>
           </li>
           <li>
             <a href="#" class="navAtletas">
               <i class="far fa-user"></i>
-              <span>Atletas</span>
+              <span id="">Athletes</span>
             </a>
             <ul class="submenu">
-              <li><a href="#">FEMALE</a></li>
-              <li><a href="#">MALE</a></li>
+              <li id="fmujeres"><a href="#">FEMALE</a></li> <!--id pestaña de filtro atletas mujeres-->
+              <li id="fhombres"><a href="#">MALE</a></li> <!--id pestaña de filtro atletas hombres-->
             </ul>
           </li>
           <li>
@@ -39,8 +40,8 @@
               <span>Disciplinas</span>
             </a>
             <ul class="submenu">
-              <li><a href="#">SUMMER</a></li>
-              <li><a href="#">WINTER</a></li>
+              <li id="tverano"><a href="#">SUMMER</a></li> <!--id pestaña de filtro temporada verano-->
+              <li id="tinvierno"><a href="#">WINTER</a></li> <!--id pestaña de filtro temporada invierno-->
             </ul>
           </li>
           <li>
@@ -49,9 +50,9 @@
               <span>Medallas</span>
             </a>
             <ul class="submenu">
-              <li><a href="#">GOLD</a></li>
-              <li><a href="#">SILVER</a></li>
-              <li><a href="#">BRONZE</a></li>
+              <li id="moro"><a href="#">GOLD</a></li> <!--id pestaña de filtro medalla de oro-->
+              <li id="mplata"><a href="#">SILVER</a></li> <!--id pestaña de filtro temporada plata-->
+              <li id="mbronce"><a href="#">BRONZE</a></li> <!--id pestaña de filtro temporada bronce-->
             </ul>
           </li>
         </ul>
@@ -75,18 +76,64 @@
       </a>
     </nav> -->
     </header>
+    
     <main class="background">
+      <!--PAGINA HOME-->
       <div class="title">
-        <h1 class="title1">ATLETA CLUB</h1>
+        <h1 class="title1">ATHLETES CLUB</h1>
         <h2 class="title2">
-          ENCUENTRA AQUI A <span class="subtitle">TUS ATLETAS FAVORITOS</span>
+          FIND YOUR FAVORITE<span class="subtitle">ATHLETES HERE</span>
         </h2>
       </div>
+      <!--CONTENEDOR ATLETAS-->
       <div id="main" class="main">
-        <!-- <h1>no me tapes!!!</h1> -->
+        <!--PAGINA TODOS LOS ATLETAS-->
         <div id="cards">
-          <!-- <h3>Todos</h3> -->
+          
         </div>
+        <!--PAGINA ATLETAS HOMBRES-->
+        <div id="atletashombres" class="main">
+          
+          <div id="cardsHombres"> ATLETES MALES</div>
+             
+        </div>
+        <!--PAGINA ATLETAS MUJERES-->
+        <div id="atletasMujeres" class="main">
+          
+          <div id="cardsMujeres"></div>
+             
+        </div>
+        <!--PAGINA TEMPORADA DE VERANO-->  
+        <div id="temporadaVerano" class="main">
+          
+          <div id="cardsVerano"></div>
+             
+        </div> 
+        <!--PAGINA TEMPORADA DE INVIERNO-->  
+        <div id="temporadaInvierno" class="main">
+          
+          <div id="cardsInvierno"></div>
+             
+        </div>
+        <!--PAGINA MEDALLA DE ORO-->  
+        <div id="medallasOro" class="main">
+          
+          <div id="cardsOro"></div>
+             
+        </div>
+        <!--PAGINA MEDALLA DE PLATA-->
+        <div id="medallasPlata" class="main">
+          
+          <div id="cardsPlata"></div>
+             
+        </div>
+        <!--PAGINA MEDALLA DE BRONCE-->    
+        <div id="medallasBronce" class="main">
+          
+          <div id="cardsBronce"></div>
+             
+        </div>
+        <!--FIN DE PAGINAS-->
       </div>
     </main>
     <footer>

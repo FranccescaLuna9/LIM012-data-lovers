@@ -55,7 +55,7 @@ ${data.map(dataPrincipal => `
 console.log(dataAtletas);
 
 
-{ /* <p>INgrese el valor del producto</p>
+ /* <p>INgrese el valor del producto</p>
   <input type="text" id="precio">
 
     <p>INgrese el orden : mayor - menor</p>
@@ -63,4 +63,4 @@ console.log(dataAtletas);
 
       <button id="btn-consultar">consultar</button>
 
-      <div id="pintar-resultado"></div> */ }
+      <div id="pintar-resultado"></div> */ 
